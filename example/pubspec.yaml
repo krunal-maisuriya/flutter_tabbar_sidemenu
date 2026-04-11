@@ -1,0 +1,14 @@
+name: example
+description: Example app for example
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  my_tabbar_sidebar_library: { path: ../ }
+
+flutter:
+  uses-material-design: true
