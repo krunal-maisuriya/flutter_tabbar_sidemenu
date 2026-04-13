@@ -12,20 +12,13 @@ and the Flutter guide for
 -->
 
 ## Flutter - TabBar with SideMenu
----
 A customizable Flutter UI component that combines a TabBar with a Side Menu. This UI is ideal for integrating both navigation styles in a single app, with smooth animated tab selection.
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg?logo=flutter)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.0+-blue.svg?logo=dart)](https://dart.dev)
-[![Stars](https://img.shields.io/github/stars/krunal-maisuriya/flutter_tabbar_sidemenu?style=for-the-badge&color=yellow)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/stargazers)
-[![Forks](https://img.shields.io/github/forks/krunal-maisuriya/flutter_tabbar_sidemenu?style=for-the-badge&color=white)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/network)
-[![Watchers](https://img.shields.io/github/watchers/krunal-maisuriya/flutter_tabbar_sidemenu?style=for-the-badge&color=orange)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/watchers)
-[![Issues](https://img.shields.io/github/issues/krunal-maisuriya/flutter_tabbar_sidemenu?style=for-the-badge&color=red)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/krunal-maisuriya/flutter_tabbar_sidemenu?style=for-the-badge&color=green)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/commits)
 
 
 ## ✨ Features
----
 - ✨ Custom TabBar and SideMenu with animated selection 
 - ✨ Sync between TabBar and Side Menu
 - ✨ Smooth transitions and animations 
@@ -34,14 +27,12 @@ A customizable Flutter UI component that combines a TabBar with a Side Menu. Thi
 - ✨ Easy to use in code
 
 ## 📱 UI Overview
----
 - Left side: **Sidebar Menu**
 - Top/Body: **TabBar + Tab Views**
 - Supports for only mobile. 
 - Working on progress for tablet layout.
 
 ## 🚀 Getting Started
----
 
 **1. Add these files to your project**
 ```
@@ -53,7 +44,6 @@ lib/
 ```
 
 **2. Example**
-
 ```
 class ExampleApp extends StatefulWidget {
   const ExampleApp({super.key});
@@ -138,7 +128,6 @@ class _ExampleAppState extends State<ExampleApp> {
 ```
 
 ## 🔄 State Synchronization
----
 Both TabBar and Sidebar Menu use the same selectedIndex.
 
 * Clicking Sidebar index → updates TabBar 
@@ -149,25 +138,30 @@ int index = 0;
 
 
 ## 📸 Screenshots
----
-![screenshot_1.png](example/assets/screenshots/screenshot_1.png)
-![screenshot_2.png](example/assets/screenshots/screenshot_2.png)
-![screenshot_3.png](example/assets/screenshots/screenshot_3.png)
-![tabbar_animated.gif](example/assets/screenshots/tabbar_animated.gif)
+<p>
+  <img src="example/assets/screenshots/screenshot_1.png" width="220"/>
+  <img src="example/assets/screenshots/screenshot_2.png" width="220"/>
+  <img src="example/assets/screenshots/screenshot_3.png" width="220"/>
+ <img src="example/assets/screenshots/tabbar_animated.gif" width="220"/>
+</p>
 
 
 ## 🔮 Future Improvements
----
 * Add responsive layout (mobile/tablet/desktop)
 * Add route-based navigation
 * Add theme switching (dark/light mode)
 
+## Github
+[![Stars](https://img.shields.io/github/stars/krunal-maisuriya/flutter_tabbar_sidemenu)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/stargazers)
+[![Forks](https://img.shields.io/github/forks/krunal-maisuriya/flutter_tabbar_sidemenu)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/network)
+[![Watchers](https://img.shields.io/github/watchers/krunal-maisuriya/flutter_tabbar_sidemenu)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/watchers)
+[![Issues](https://img.shields.io/github/issues/krunal-maisuriya/flutter_tabbar_sidemenu)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/krunal-maisuriya/flutter_tabbar_sidemenu)](https://github.com/krunal-maisuriya/flutter_tabbar_sidemenu/commits)
+
 ## 🤝 Contribution
----
 Feel free to fork and improve this project.
 
 ## 📄 License
----
 This project is open-source and free to use.
 
 ## 👨‍💻 Author
