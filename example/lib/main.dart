@@ -41,8 +41,10 @@ class _ExampleAppState extends State<ExampleApp> {
       home: Scaffold(
         body: Stack(
           children: [
+            /// Screens
             pages[index],
 
+            /// Bottom TabBar View
             Positioned(
               bottom: 20, left: 0, right: 0,
               child: CustomMainTabbarView(
@@ -52,12 +54,13 @@ class _ExampleAppState extends State<ExampleApp> {
               ),
             ),
 
+            /// SideBar background color
             if (isOpenDrawer)
               Positioned.fill(
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                   child: GestureDetector(
-                    onTap: () => { setState(() => isOpenDrawer = false ),},
+                    onTap: () => { setState(() => isOpenDrawer = false),},
                     child: Container(
                       color: Colors.black.withValues(alpha: 0.4),
                     ),
@@ -65,7 +68,20 @@ class _ExampleAppState extends State<ExampleApp> {
                 ),
               ),
 
-            SideDrawerMenuView(isOpenDrawer: isOpenDrawer),
+            /// SideBar View
+            SideDrawerMenuView(
+              isOpenDrawer: isOpenDrawer, selectIndex: index,
+              onItemTap: (value) {
+                setState(() => isOpenDrawer = false);
+                switch (value) {
+                  case 0: index = 0;
+                  case 1: index = 1;
+                  case 2: index = 2;
+                  case 3:
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => Container()));
+                }
+              },
+            ),
           ],
         ),
       ),

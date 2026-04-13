@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 class SideDrawerMenuView extends StatefulWidget {
   final bool isOpenDrawer;
+  final int selectIndex;
   final Color drawerBGColor;
+  final Function(int) onItemTap;
 
   const SideDrawerMenuView({
     super.key,
     required this.isOpenDrawer,
+    required this.selectIndex,
     this.drawerBGColor = Colors.white,
+    required this.onItemTap,
   });
 
   @override
@@ -22,7 +26,6 @@ class _SideDrawerMenuViewState extends State<SideDrawerMenuView> with SingleTick
 
   final List<String> menus = ["Dashboard", "Search", "Profile", "Setting"];
   int selectedIndex = 0;
-
   double itemHeight = 60;
 
 
@@ -35,6 +38,25 @@ class _SideDrawerMenuViewState extends State<SideDrawerMenuView> with SingleTick
   }
 
   @override
+  void didUpdateWidget(covariant SideDrawerMenuView oldWidget) {
+    super.didUpdateWidget(oldWidget);
+
+    if (widget.isOpenDrawer != oldWidget.isOpenDrawer) {
+      if (widget.isOpenDrawer) {
+        _controller.forward();
+      } else {
+        _controller.reverse();
+      }
+    }
+
+    if (oldWidget.selectIndex != widget.selectIndex) {
+      setState(() {
+        selectedIndex = widget.selectIndex;
+      });
+    }
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
@@ -43,8 +65,6 @@ class _SideDrawerMenuViewState extends State<SideDrawerMenuView> with SingleTick
 
   @override
   Widget build(BuildContext context) {
-    widget.isOpenDrawer ? _controller.forward() : _controller.reverse();
-
     return Positioned.fill(
       child: GestureDetector(
         onHorizontalDragUpdate: (details) {
@@ -93,6 +113,7 @@ class _SideDrawerMenuViewState extends State<SideDrawerMenuView> with SingleTick
                                     behavior: HitTestBehavior.translucent,
                                     onTap: () {
                                       setState(() => selectedIndex = index);
+                                      widget.onItemTap(index);
                                     },
                                     child: Container(
                                       height: itemHeight,
